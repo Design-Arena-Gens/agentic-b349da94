@@ -1,0 +1,56 @@
+@import "tailwindcss";
+:root {
+  --background: #fef9ef;
+  --foreground: #2d1f12;
+  --whisker-cream: #fff3d9;
+  --tabby-caramel: #d1864b;
+  --midnight-paw: #191726;
+  --mint-toy: #8dd8c5;
+  --sunbeam: #ffdd85;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-sand: #fef3d4;
+  --color-sand-strong: #f7d49d;
+  --color-paw: #2e2a44;
+  --color-mint: #8dd8c5;
+  --color-sunbeam: #ffdd85;
+  --color-cream: #fff6ea;
+  --color-tabby: #d1864b;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-meow: var(--font-feline-accent);
+  --radius-pill: 9999px;
+}
+
+body {
+  background: radial-gradient(circle at 20% 10%, #fff6ea 0, #fff6ea 30%, transparent 60%),
+    radial-gradient(circle at 80% 0%, #ffe7b5 0, #ffe7b5 25%, transparent 55%),
+    var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  min-height: 100vh;
+}
+
+.bg-sand {
+  background-color: var(--color-sand);
+}
+
+.paw-grid {
+  background-image: radial-gradient(var(--color-sunbeam) 0.75px, transparent 0.75px),
+    radial-gradient(var(--color-sunbeam) 0.75px, transparent 0.75px);
+  background-size: 16px 16px;
+  background-position: 0 0, 8px 8px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.12), transparent);
+}
+
+.scribble {
+  font-family: var(--font-meow), var(--font-sans);
+}
+
+.soft-card {
+  box-shadow: 0 20px 40px rgba(25, 23, 38, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.4);
+}
